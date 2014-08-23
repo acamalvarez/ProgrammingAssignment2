@@ -1,7 +1,7 @@
-## This function, creates a special matrix, which is really a list
-## containing a function that set the value of the matrix, get the
-## value of the matrix, set the value of the inverse and get de value
-## of the inverse.
+# This function, creates a special matrix, which is really a list
+# containing a function that set the value of the matrix, get the
+# value of the matrix, set the value of the inverse and get de value
+# of the inverse. You have to enter a matrix.
 
 makeCacheMatrix <- function(x = matrix()) {
       m <- NULL
@@ -16,8 +16,11 @@ makeCacheMatrix <- function(x = matrix()) {
            getsolve = getsolve)
 }
 
-## This function calculates the inverse of the special matrix, but it
-## first checks to see if the inverse has already been calcualated.
+# This function calculates the inverse of the special matrix, but it
+# first checks to see if the inverse has already been calcualated.
+# If so, it gets the mean from the cache and skips the computation. 
+# Otherwise, it calculates the mean of the data and sets the value 
+# of the mean in the cache via the setmean function.
 
 cacheSolve <- function(x, ...) {
       m <- x$getsolve()
